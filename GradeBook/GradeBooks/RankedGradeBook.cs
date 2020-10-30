@@ -16,19 +16,19 @@ namespace GradeBook.GradeBooks
             {
                 throw new InvalidOperationException("Ranked-grading requires a minimum of 5 students to work");
             }
-            if (20 < averageGrade)
+            if (20 <= averageGrade)
             {
                 return 'A';
             }
-            if ( 40 < averageGrade && averageGrade <= 20)
+            if (40 <= averageGrade && averageGrade < 20)
             {
                 return 'B';
             }
-            if (60 < averageGrade && averageGrade <= 40)
+            if (60 <= averageGrade && averageGrade < 40)
             {
                 return 'C';
             }
-            if (80 < averageGrade && averageGrade <= 60)
+            if (80 <= averageGrade && averageGrade < 60)
             {
                 return 'D';
             }
