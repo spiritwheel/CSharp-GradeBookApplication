@@ -12,23 +12,23 @@ namespace GradeBook.GradeBooks
 
         public override char GetLetterGrade(double averageGrade)
         {
-            if (averageGrade < 5)
+            if (averageGrade <= 5)
             {
                 throw new InvalidOperationException();
             }
-            if (5 <= averageGrade && averageGrade < 20)
+            if (5 < averageGrade && averageGrade <= 20)
             {
                 return 'A';
             }
-            if (20 <= averageGrade && averageGrade < 40)
+            if (20 < averageGrade && averageGrade <= 40)
             {
                 return 'B';
             }
-            if (40 <= averageGrade && averageGrade < 60)
+            if (40 < averageGrade && averageGrade <= 60)
             {
                 return 'C';
             }
-            if (60 <= averageGrade && averageGrade < 80)
+            if (60 < averageGrade && averageGrade <= 80)
             {
                 return 'D';
             }
