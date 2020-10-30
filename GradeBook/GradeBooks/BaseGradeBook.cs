@@ -113,7 +113,7 @@ namespace GradeBook.GradeBooks
 
             if (IsWeighted == true)
             {
-                if (Type.Equals(StudentType.Honors) || Type.Equals(StudentType.DualEnrolled))
+                if (studentType == StudentType.Honors || studentType == StudentType.DualEnrolled)
                 {
                     addPoint ++;
                 }
@@ -125,13 +125,13 @@ namespace GradeBook.GradeBooks
                 case 'B':
                     return 3 + addPoint;
                 case 'C':
-                    return 2;
+                    return 2 + addPoint;
                 case 'D':
-                    return 1;
+                    return 1 + addPoint;
                 case 'F':
-                    return 0;
+                    return 0 + addPoint;
             }
-            return 0;
+            return 0 + addPoint;
         }
 
         public virtual void CalculateStatistics()
