@@ -16,7 +16,7 @@ namespace GradeBook.GradeBooks
             {
                 throw new InvalidOperationException();
             }
-            if (averageGrade < 20)
+            if (5 <= averageGrade && averageGrade < 20)
             {
                 return 'A';
             }
